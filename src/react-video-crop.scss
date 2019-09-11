@@ -1,0 +1,108 @@
+$prefix: react-video-crop;
+$border: 12px solid #000;
+$border-transparent: 6px solid transparent;
+
+.#{ $prefix }-video-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.#{ $prefix }-video {
+  width: 100%;
+  height: 100%;
+}
+
+/* 控件 */
+.#{ $prefix }-controls {
+  display: flex;
+  box-sizing: border-box;
+  padding: 16px 0;
+}
+
+/* 按钮 */
+.#{ $prefix }-btn {
+  padding: 4px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.#{ $prefix }-play-icon {
+  width: 20px;
+  height: 20px;
+  fill: #000;
+}
+
+/* 进度条 */
+.#{ $prefix }-progress-box {
+  flex-grow: 1;
+  position: relative;
+}
+
+.#{ $prefix }-progress {
+  position: relative;
+  margin-top: 8px;
+  height: 12px;
+  background-color: #dddddd;
+
+  &-child {
+    height: 100%;
+    background-color: #000;
+    opacity: .5;
+  }
+}
+
+.#{ $prefix }-timeStr {
+  margin: 5px 0 0 5px;
+  font-size: 12px;
+  user-select: none;
+}
+
+/* 调整范围 */
+.#{ $prefix }-range {
+  position: absolute;
+  width: 0;
+  height: 0;
+
+  &-text {
+    position: absolute;
+    font-size: 12px;
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+.#{ $prefix }-range-start {
+  top: -4px;
+  border-top: $border;
+  border-right: $border-transparent;
+  border-left: $border-transparent;
+  transform: translate(-6px);
+
+  &-text {
+    top: -17px;
+    left: 8px;
+  }
+}
+
+.#{ $prefix }-range-end {
+  bottom: -1px;
+  border-right: $border-transparent;
+  border-left: $border-transparent;
+  border-bottom: $border;
+  transform: translate(-6px);
+
+  &-text {
+    bottom: -17px;
+    right: 8px;
+  }
+}
+
+/* 裁图 */
+.#{ $prefix }-adjustment {
+  box-sizing: border-box;
+  position: absolute;
+  border: 3px dashed #8d8d8d;
+  pointer-events: none;
+}

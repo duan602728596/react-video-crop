@@ -1,0 +1,31 @@
+# node
+node_modules
+npm-debug.log
+package-lock.json
+
+# yarn
+yarn.lock
+yarn-error.log
+
+# webstorm
+.idea
+
+# project
+src
+tests
+example
+
+# ignore
+.npmignore
+.gitignore
+.eslintignore
+
+# config
+.editorconfig
+.eslintrc.yml
+.lintstagedrc.yml
+gulpfile.js
+sweet.config.js
+
+# cache
+.sweet
