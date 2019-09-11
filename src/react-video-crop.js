@@ -22,8 +22,10 @@ function ReactVideoCrop(props) {
 
   // 定时器
   function progressTimer() {
-    setCurrentTime(videoRef.current.currentTime);
-    timer = requestAnimationFrame(progressTimer);
+    if (videoRef.current) {
+      setCurrentTime(videoRef.current.currentTime);
+      timer = requestAnimationFrame(progressTimer);
+    }
   }
 
   // 播放
